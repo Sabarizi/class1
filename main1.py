@@ -31,15 +31,14 @@ config = RunConfig(
 
 # Write Agent
 writer = Agent(
-    name='Translater Agent',
+    name='weather Agent',
     instructions=(
-        "You are a Translator agent. Translate the user's message from **Roman Urdu** to English, and English to Roman Urdu.\n\n"
-        "Roman Urdu means Urdu written in English letters. Example: 'mera naam saba hai'."
+       "you ae a a weather agent. You will provide the current weather information for a given city.\n"
     )
 )
 
 # Taking input from user
-user_input = input("Enter your message to Translate into English or Roman Urdu: ")
+user_input = input(" Enter the name of the city to get the current weather: ")
 
 response = Runner.run_sync(
     writer,
